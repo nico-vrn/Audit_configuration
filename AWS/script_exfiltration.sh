@@ -66,6 +66,7 @@ else
     exit 1
 fi
 
+
 # Nettoyage des fichiers temporaires
 log "Nettoyage des fichiers temporaires..."
 rm -rf $OUTPUT_DIR/*.json
