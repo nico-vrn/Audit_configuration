@@ -1,0 +1,73 @@
+
+    <html>
+    <head>
+      <style>
+        body { font-family: Arial, sans-serif; color: #333; background-color: #f9f9f9; }
+        h1 { color: #4CAF50; text-align: center; }
+        .section { margin-bottom: 20px; }
+        .ok { color: green; font-weight: bold; }
+        .update { color: orange; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        .priority { font-style: italic; font-size: 0.9em; color: #555; }
+        .section-title { font-size: 1.2em; color: #333; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .item { margin: 8px 0; padding: 10px; border-radius: 5px; }
+        .ok-bg { background-color: #e6ffed; }
+        .update-bg { background-color: #fff5e6; }
+        .error-bg { background-color: #ffe6e6; }
+      </style>
+    </head>
+    <body>
+      <h1>Rapport d'Analyse de Configuration et Dépendances</h1>
+      <div class="section">
+          <div class="section-title">Variables d'Environnement</div>
+          <div class="item error-bg">
+              NODE_ENV : <span class="error">Erreur</span> - Non conforme : NODE_ENV attendu = production, trouvé = non défini.
+              <div class="priority">Priorité : Moyenne</div>
+              <br><em>Suggestion : Pour corriger, définissez NODE_ENV à 'production' dans vos variables d'environnement.</em>
+            </div><div class="item error-bg">
+              APP_KEY : <span class="error">Erreur</span> - Non conforme : APP_KEY attendu = expected_value, trouvé = non défini.
+              <div class="priority">Priorité : Haute</div>
+              <br><em>Suggestion : Pour corriger, définissez APP_KEY à 'expected_value' dans vos variables d'environnement.</em>
+            </div><div class="item error-bg">
+              CONFIG_PATH : <span class="error">Erreur</span> - Non conforme : CONFIG_PATH attendu = /etc/config, trouvé = non défini.
+              <div class="priority">Priorité : Faible</div>
+              <br><em>Suggestion : Pour corriger, définissez CONFIG_PATH à '/etc/config' dans vos variables d'environnement.</em>
+            </div><div class="item ok-bg">
+              DB_PASSWORD : <span class="ok">OK</span> - Variable sensible DB_PASSWORD non exposée.
+              
+              
+            </div><div class="item ok-bg">
+              API_SECRET : <span class="ok">OK</span> - Variable sensible API_SECRET non exposée.
+              
+              
+            </div>
+        </div><div class="section">
+          <div class="section-title">Informations Système</div>
+          <div class="item error-bg">
+              platform : <span class="error">Erreur</span> - Non conforme : platform attendu = linux, trouvé = win32.
+              <div class="priority">Priorité : Moyenne</div>
+              <br><em>Suggestion : Pour corriger, assurez-vous que votre système fonctionne sous linux.</em>
+            </div><div class="item ok-bg">
+              cpuArch : <span class="ok">OK</span> - cpuArch est correctement configuré : x64.
+              
+              
+            </div><div class="item ok-bg">
+              Node.js Version : <span class="ok">OK</span> - Version de Node.js conforme : v21.2.0.
+              
+              
+            </div>
+        </div><div class="section">
+          <div class="section-title">Dépendances</div>
+          <div class="item ok-bg">
+              @cyclonedx/bom : <span class="ok">OK</span> - @cyclonedx/bom est à jour : 4.1.0.
+              
+              
+            </div><div class="item update-bg">
+              aws-sdk : <span class="update">Mise à jour disponible</span> - aws-sdk n'est pas à jour : installé = 2.1591.0, dernière version = 2.1691.0
+              <div class="priority">Priorité : Moyenne</div>
+              <br><em>Suggestion : Mettez à jour aws-sdk en exécutant 'npm install aws-sdk@2.1691.0'.</em>
+            </div>
+        </div>
+    </body>
+    </html>
+  

@@ -1,0 +1,14 @@
+{
+  "envVariables": {
+    "APP_KEY": "Non conforme : attendu expected_value, trouvé non défini",
+    "CONFIG_PATH": "Non conforme : attendu /etc/config, trouvé non défini"
+  },
+  "systemInfo": {
+    "platform": "Non conforme : attendu linux, trouvé win32",
+    "cpuArch": "OK"
+  },
+  "dependencies": {
+    "express": "Non conforme : bibliothèque manquante",
+    "lodash": "Non conforme : bibliothèque manquante"
+  }
+}
